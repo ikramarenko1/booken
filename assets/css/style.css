@@ -148,9 +148,7 @@ body {
 
 
 /* Header */
-.navbar,
-.overlay,
-.header__top:is(.input__wrapper, .header__action-btn:last-child),
+.header__top :is(.input__wrapper, .header__action-btn:last-child),
 .header-contact-link {
 	display: none;
 }
@@ -201,7 +199,7 @@ body {
 	transition: var(--transition-1);
 }
 
-.header__action:is(.header__action-btn, .nav-open-btn):is(:hover, :focus) {
+.header__action :is(.header__action-btn, .nav-open-btn):is(:hover, :focus) {
 	color: var(--maximum-blue-green);
 }
 
