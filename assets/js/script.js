@@ -37,3 +37,32 @@ const activeElemOnScroll = () => {
 }
 
 addEventOnElem(window, "scroll", activeElemOnScroll)
+
+
+// Timer
+const timerHours = document.getElementById('hours')
+const timerMinutes = document.getElementById('minutes')
+const timerSeconds = document.getElementById('seconds')
+
+setInterval(() => {
+	let date = new Date()
+	let hours = 23 - date.getHours()
+	let minutes = 59 - date.getMinutes()
+	let seconds = 59 - date.getSeconds()
+
+	timerHours.innerHTML = hours
+
+	if (minutes < 10 && seconds < 10) {
+		timerMinutes.innerHTML = "0" + minutes
+		timerSeconds.innerHTML = "0" + seconds
+	} else if (minutes < 10 && seconds >= 10) {
+		timerMinutes.innerHTML = "0" + minutes
+		timerSeconds.innerHTML = seconds
+	} else if (seconds < 10 && minutes >= 10) {
+		timerMinutes.innerHTML = minutes
+		timerSeconds.innerHTML = "0" + seconds
+	} else {
+		timerMinutes.innerHTML = minutes
+		timerSeconds.innerHTML = seconds
+	}
+}, 1000)
