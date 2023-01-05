@@ -217,6 +217,105 @@ body {
 	gap: 20px;
 }
 
+.section__title,
+.section__text {
+	text-align: center;
+}
+
+.section__text {
+	font-size: var(--fs-6);
+}
+
+.img-holder {
+	aspect-ratio: var(--width) / var(--height);
+	overflow: hidden;
+}
+
+.img-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.product__card {
+	position: relative;
+	border: 1px solid var(--white_10);
+}
+
+.product__card .card__badge {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	background-color: var(--maximum-blue-green);
+	color: var(--xiketic);
+	font-size: var(--fs-8);
+	font-weight: var(--fw-700);
+	text-transform: uppercase;
+	padding: 3px 8px;
+	border-radius: var(--radius-pill);
+}
+
+.product__card .card__banner { 
+	position: relative;
+}
+
+.product__card .card__action {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.8);
+	background-color: var(--xiketic);
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	padding: 10px 15px;
+	border-radius: var(--radius-pill);
+	transition: var(--transition-2);
+	opacity: 0;
+}
+
+.product__card:is(:hover, :focus) .card__action {
+	transform: translate(-50%, -50%) scale(1);
+	opacity: 1;
+}
+
+.product__card .action-btn {
+	font-size: 18px;
+	transition: var(--transition-1);
+}
+
+.product__card :is(.action-btn, .card__title):is(:hover, :focus) {
+	color: var(--maximum-blue-green);
+}
+
+.product__card .card__content {
+	padding: 10px;
+}
+
+.product__card .h3 { 
+	font-weight: var(--fw-400);
+}
+
+.product__card .card__title {
+	font-family: var(--ff-jost);
+	transition: var(--transition-1);
+}
+
+.product__card .card__price {
+	color: var(--maximum-blue-green);
+	margin-block: 10px 5px;
+}
+
+.product__card .rating-wrapper {
+	display: flex;
+	gap: 5px;
+	color: var(--selective-yellow);
+}
+
+.product__card .rating-wrapper ion-icon {
+	--ionicon-stroke-width: 45px;
+}
+
 
 /* Header */
 .header__top :is(.input__wrapper, .header__action-btn:last-child),
@@ -471,11 +570,14 @@ body {
 }
 
 
-
 /* Featured collection */
+.featured .section__text {
+	margin-block: 10px 50px;
+}
 
-
-
+.featured .grid-list {
+	gap: 10px;
+}
 
 
 /* Offer */
