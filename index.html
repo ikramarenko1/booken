@@ -22,7 +22,7 @@
 	<link rel="preload" as="image" href="assets/images/hero-banner.png">
 	<link rel="preload" as="image" href="assets/images/hero-bg.jpg">
 </head>
-<body>
+<body id="top">
 	<!-- HEADER -->
 	<header class="header" data-header>
 		<div class="header__top">
@@ -940,8 +940,8 @@
 
 	<!-- FOOTER -->
 	<footer class="footer has-bg-image" style="background-image: url('assets/images/section-bg.jpg');">
-		<div class="footer__top">
-			<div class="container">
+		<div class="footer__top section">
+			<div class="container grid-list">
 				<div class="footer__brand">
 					<a href="#" class="logo">
 						<img src="assets/images/logo.svg" alt="booken home" width="138" height="28">
@@ -1091,6 +1091,13 @@
 			</div>
 		</div>
 	</footer>
+
+
+	<!-- Back to top -->
+	<a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+		<ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+	</a>
+
 
 	<!-- js scripts -->
 	<script src="assets/js/script.js" defer></script>

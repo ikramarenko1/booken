@@ -25,14 +25,17 @@ const toggleNavbar = () => {
 addEventOnElem(navTogglers, "click", toggleNavbar)
 
 
-// Active header when window scroll down to 100px
+// Active header and back-to-top btn when window scroll down to 100px
 const header = document.querySelector("[data-header]")
+const backTopBtn = document.querySelector("[data-back-top-btn]")
 
 const activeElemOnScroll = () => {
 	if (window.scrollY > 100) {
 		header.classList.add("active")
+		backTopBtn.classList.add("active")
 	} else { 
 		header.classList.remove("active")
+		backTopBtn.classList.remove("active")
 	}
 }
 
